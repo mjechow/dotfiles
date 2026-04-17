@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read|Edit|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/check-secrets.sh",
+            "statusMessage": "Checking for secret files..."
+          }
+        ]
+      }
+    ]
+  }
+}
