@@ -1,4 +1,18 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(journalctl *)",
+      "Bash(getent *)",
+      "Bash(zcat *)",
+      "Bash(zgrep *)",
+      "Bash(dpkg -l *)",
+      "Bash(dpkg -S *)",
+      "Bash(apt-cache *)",
+      "Bash(fail2ban-client status *)",
+      "Bash(systemctl status *)",
+      "Bash(systemctl is-active *)"
+    ]
+  },
   "hooks": {
     "PreToolUse": [
       {
@@ -12,5 +26,8 @@
         ]
       }
     ]
-  }
+  },
+  "theme": "light",
+  "remoteControlAtStartup": true,
+  "agentPushNotifEnabled": true
 }
