@@ -24,6 +24,15 @@
             "statusMessage": "Checking for secret files..."
           }
         ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.command' | grep -qw 'sudo' && printf '{\"continue\":false,\"stopReason\":\"sudo blocked — show the command for the user to run manually\"}' || true"
+          }
+        ]
       }
     ]
   },
