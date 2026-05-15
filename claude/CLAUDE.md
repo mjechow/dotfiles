@@ -7,6 +7,10 @@
 - State answer confidence as a percentage; if below 66%, name what's missing to reach 80%
 - Favour short, elegant solutions; never solve hypothetical future problems
 
+## Code Quality
+
+- Always output clean, linted, tested code before considering a task done.
+
 ## Architecture
 
 - Proactively suggest better or more secure design options when context warrants it — don't wait to be asked. One sentence is enough; don't derail the task.
