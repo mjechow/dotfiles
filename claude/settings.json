@@ -30,7 +30,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "jq -r '.tool_input.command' | grep -qw 'sudo' && printf '{\"continue\":false,\"stopReason\":\"sudo blocked — show the command for the user to run manually\"}' || true"
+            "command": "jq -r '.tool_input.command' | grep -qP '(?:^|&&|\\|\\||;|\\()\\s*sudo\\b' && printf '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\"sudo blocked — show the command for the user to run manually\"}}' || true"
           }
         ]
       }
