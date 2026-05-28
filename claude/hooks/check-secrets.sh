@@ -6,7 +6,7 @@
 input=$(cat)
 path=$(echo "$input" | jq -r '.tool_input.file_path // .tool_input.command // ""')
 
-if echo "$path" | grep -qE 'pwd\.env$|secret\.backup|\.secret|\.key'; then
+if echo "$path" | grep -qE 'pwd\.env$|secret\.backup|\.secret$|\.key'; then
     echo "Blocked: secret file access not allowed: $path" >&2
     exit 2
 fi

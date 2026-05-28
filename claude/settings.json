@@ -36,8 +36,8 @@
       }
     ]
   },
+  "effortLevel": "high",
   "theme": "light",
   "remoteControlAtStartup": true,
-  "agentPushNotifEnabled": true,
-  "effortLevel": "high"
+  "agentPushNotifEnabled": true
 }
