@@ -42,3 +42,7 @@ stow claude
 - `~/.claude/settings.local.json` is machine-local (permissions specific to each host) and not tracked.
 - The hooks assume `jq` is available on `PATH`.
 - CI runs `pre-commit run --all-files` (shellcheck, JSON validation, gitleaks).
+
+## License
+
+[Unlicense](LICENSE) — public domain.
