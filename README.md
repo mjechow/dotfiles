@@ -4,9 +4,9 @@ Personal dotfiles managed with [GNU Stow](https://www.gnu.org/software/stow/).
 
 ## Packages
 
-| Package | Stow target | Contents |
-|---------|-------------|----------|
-| `claude` | `~/.claude/` | Claude Code global config, hooks, slash commands |
+| Package  | Stow target  | Contents                                          |
+|----------|--------------|---------------------------------------------------|
+| `claude` | `~/.claude/` | Claude Code global config, hooks, slash commands  |
 
 ### claude
 
@@ -25,15 +25,20 @@ sudo apt install stow   # Debian/Ubuntu
 
 # Clone
 git clone git@github.com:mjechow/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+
+# Install pre-commit hooks (requires pre-commit)
+pip install pre-commit
+pre-commit install
 
 # Stow a package (creates symlinks in ~)
-cd ~/dotfiles
 stow claude
 ```
 
-`stow claude` creates `~/.claude/` as a symlink tree pointing into `~/dotfiles/claude/.claude/`.
+`stow claude` creates symlinks inside `~/.claude/` pointing into `~/dotfiles/claude/.claude/`.
 
 ## Notes
 
 - `~/.claude/settings.local.json` is machine-local (permissions specific to each host) and not tracked.
 - The hooks assume `jq` is available on `PATH`.
+- CI runs `pre-commit run --all-files` (shellcheck, JSON validation, gitleaks).
