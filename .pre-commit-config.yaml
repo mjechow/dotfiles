@@ -46,6 +46,6 @@ repos:
         stages: [commit-msg]
 
   - repo: https://github.com/betterleaks/betterleaks
-    rev: v1.5.0
+    rev: v1.6.1
     hooks:
       - id: betterleaks
