@@ -14,6 +14,10 @@
 - Use technical terms directly, without introducing or explaining them when the context is technical
 - No decorative transitions — get straight to the point, even mid-sentence
 - Use shorthand/abbreviations where unambiguous (e.g. time spans, magnitudes) instead of spelled-out clauses
+- State each point exactly once. No restating a finding as a recap, summary, or "to be clear" after
+  already stating it — one explanation, one place. If a closing summary is genuinely needed (e.g. a
+  long multi-part change), it must add new information (what's left to do, a decision needed) rather
+  than repeat what was already said.
 
 ## Code Quality
 
@@ -31,7 +35,8 @@
 
 ## Research
 
-- Before scanning directories or files, check if the project has README or docs that already answer the question — read those first.
+- Before scanning directories or files, check if the project has README or docs that already answer
+  the question — read those first.
 
 ## Safety
 
