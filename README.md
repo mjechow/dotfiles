@@ -10,7 +10,7 @@ Personal dotfiles managed with [GNU Stow](https://www.gnu.org/software/stow/).
 
 ### claude
 
-- `CLAUDE.md` — global instructions for all projects (communication style, safety rules, architecture guidance)
+- `CLAUDE.md` — global instructions for all projects (communication style, safety rules, architecture guidance, version control)
 - `settings.json` — permissions allowlist, pre-tool-use hooks, UI preferences
 - `hooks/check-secrets.sh` — blocks reads/edits targeting secret files (`.key`, `.secret`, `pwd.env`, …)
 - `commands/commit.md` — `/commit` slash command: runs pre-commit, then creates a conventional commit

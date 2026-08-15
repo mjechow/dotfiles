@@ -19,6 +19,11 @@
 
 - Always output clean, linted, tested code before considering a task done.
 
+## Version Control
+
+- Never commit on your own initiative. Commits happen at the end of a session, and only when
+  I say so. Leave finished work in the working tree and tell me it is ready.
+
 ## Architecture
 
 - Proactively suggest better or more secure design options when context warrants it — don't wait to be asked.
