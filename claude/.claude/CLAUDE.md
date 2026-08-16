@@ -33,6 +33,18 @@
 - Proactively suggest better or more secure design options when context warrants it — don't wait to be asked.
   One sentence is enough; don't derail the task.
 
+### Paradigm & Abstraction
+
+- Follow the native idioms of the language/framework/paradigm in use,
+  not principles borrowed from a different one (e.g. OOP rules in
+  functional/procedural code).
+- Introduce abstraction only when a third concrete implementation
+  actually needs it — never in advance (YAGNI).
+- Unify duplicated code only once it's actually duplicated (>2 places),
+  not in anticipation of future duplication.
+- Separate pure logic from I/O/side effects once the former gets more
+  complex than trivial pass-through — regardless of language/framework.
+
 ## Research
 
 - Before scanning directories or files, check if the project has README or docs that already answer
