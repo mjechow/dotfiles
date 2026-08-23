@@ -34,6 +34,10 @@
   even positively phrased ones. Rationale belongs only in decision docs (a README's decisions/log
   section, ADRs). If asked "why X" in chat, answer in chat — don't also copy that explanation into
   an execution doc unless explicitly asked to record it there.
+- Document the current state only. History — what a tool used to do, which bug was fixed, how a
+  value was arrived at, what was tried before — belongs in the git history, not in a .md file.
+  Record a past fact only where it still constrains the present (e.g. a workaround that must
+  stay until an upstream fix lands), and then state the constraint, not the story.
 
 ## Code Quality
 
