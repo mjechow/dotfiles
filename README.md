@@ -40,6 +40,9 @@ sudo apt install stow   # Debian/Ubuntu
 git clone git@github.com:mjechow/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 
+# Register the clean filter for claude/.claude/settings.json (needs jq)
+git config filter.claude-settings.clean "jq 'del(.model, .effortLevel)'"
+
 # Stow a package (creates symlinks in ~)
 stow claude
 ```
@@ -61,6 +64,10 @@ actionlint, conventional commit messages, betterleaks, plus trailing-whitespace/
 ## Notes
 
 - `~/.claude/settings.local.json` is machine-local (permissions specific to each host) and not tracked.
+- `model` and `effortLevel` are stripped from `claude/.claude/settings.json` by the clean filter
+  declared in [.gitattributes](.gitattributes): `/model` and `/config` write them into the stowed
+  file, but they stay out of the index. They live only in the working copy — a `git checkout` of
+  that file drops them.
 - The hooks assume `jq` is available on `PATH`.
 
 ## License

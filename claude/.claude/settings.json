@@ -36,9 +36,7 @@
       }
     ]
   },
-  "effortLevel": "high",
   "theme": "light",
   "remoteControlAtStartup": false,
-  "agentPushNotifEnabled": true,
-  "model": "sonnet"
+  "agentPushNotifEnabled": true
 }
