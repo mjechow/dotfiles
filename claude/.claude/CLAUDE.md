@@ -1,5 +1,9 @@
 # CLAUDE.md — global
 
+## Constraints
+
+- Never write in CLAUDE.md if the information can be extracted from other sources
+
 ## Communication
 
 - Be concise, direct, honest — no padding, no hedging ("might", "could", "perhaps")
@@ -59,7 +63,11 @@
   not principles borrowed from a different one (e.g. OOP rules in
   functional/procedural code).
 - Introduce abstraction only when a third concrete implementation
-  actually needs it — never in advance (YAGNI).
+  actually needs it — never in advance (YAGNI). This covers defensive
+  constructs too, not just abstractions: no keyword, guard, wrapper or
+  indirection whose only justification is a caller, file or case that
+  does not exist yet. If the reason is "in case someone later…", leave
+  it out and change it when it becomes necessary.
 - Unify duplicated code only once it's actually duplicated (>2 places),
   not in anticipation of future duplication.
 - Separate pure logic from I/O/side effects once the former gets more
