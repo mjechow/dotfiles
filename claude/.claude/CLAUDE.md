@@ -91,6 +91,16 @@
   not in anticipation of future duplication.
 - Separate pure logic from I/O/side effects once the former gets more
   complex than trivial pass-through — regardless of language/framework.
+- A unit owns one concern. Abstract principles do not fire mid-task, so
+  treat each of these as a violation until argued otherwise:
+  - a parameter that describes the CALLER's world, not the unit's own
+    (a cycle time passed to a sensor driver, a screen size to a parser)
+  - a unit that blocks, sleeps or waits when it is not itself a timing
+    or scheduling component
+  - a name that needs "and" to describe what it does
+  When one fires, split it: the unit exposes what it knows, the caller
+  decides what to do with it. Moving code into the right file is not the
+  same as giving it the right responsibility — check both.
 
 ## Research
 
