@@ -43,11 +43,23 @@ cd ~/dotfiles
 # Register the clean filter for claude/.claude/settings.json (needs jq)
 git config filter.claude-settings.clean "jq 'del(.model, .effortLevel)'"
 
+# Keep local model/effortLevel edits out of git status
+git update-index --skip-worktree claude/.claude/settings.json
+
 # Stow a package (creates symlinks in ~)
 stow claude
 ```
 
 `stow claude` creates symlinks inside `~/.claude/` pointing into `~/dotfiles/claude/.claude/`.
+
+`claude/.claude/settings.json` is flagged `skip-worktree`, so a `git pull` carrying changes to it
+aborts. To take those changes:
+
+```bash
+git update-index --no-skip-worktree claude/.claude/settings.json
+git stash && git pull && git stash pop   # resolve, keeping local model/effortLevel
+git update-index --skip-worktree claude/.claude/settings.json
+```
 
 ## Development
 
