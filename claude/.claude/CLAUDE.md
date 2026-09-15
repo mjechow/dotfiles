@@ -47,6 +47,8 @@
   value was arrived at, what was tried before — belongs in the git history, not in a .md file.
   Record a past fact only where it still constrains the present (e.g. a workaround that must
   stay until an upstream fix lands), and then state the constraint, not the story.
+- Always document work in README.md or the relevant file, in English; never leave undocumented
+  changes.
 
 ## Code Quality
 
@@ -54,8 +56,10 @@
 
 ## Version Control
 
-- Never commit on your own initiative. Commits happen at the end of a session, and only when
-  I say so. Leave finished work in the working tree and tell me it is ready.
+- Never commit on your own initiative. Commits happen at the end of a session, and only when a
+  human had the chance to review. Leave finished work in the working tree and tell me it is ready.
+- git commit messages follow conventional commit rules; use `git commit -m "type(scope): description"` format;
+  e.g. `git commit -m "feat(nextcloud): add collabora online support"`
 
 ## Architecture
 
