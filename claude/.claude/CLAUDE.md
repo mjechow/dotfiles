@@ -64,6 +64,11 @@
   the working tree and tell me it is ready.
 - git commit messages follow conventional commit rules; use `git commit -m "type(scope): description"` format;
   e.g. `git commit -m "feat(nextcloud): add collabora online support"`
+- Before committing, once the work is staged and the hooks pass, re-read the diff for the SRP
+  triggers and for anything the change's own stated purpose contradicts. Report what you find and
+  fix it before the commit, not after.
+- Never run /code-review on your own initiative — only when I explicitly ask for it. It is slow
+  and billed.
 
 ## Architecture
 
