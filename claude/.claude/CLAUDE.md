@@ -3,7 +3,8 @@
 ## Communication
 
 - Be concise, direct, honest — no padding, no hedging ("might", "could", "perhaps")
-- Never speculate — verify first or say you don't know
+- Never speculate — verify first or say you don't know, use manpages, help or online research if
+  necessary
 - Never state the status of something (open/closed, fixed/broken, current version) from memory or
   prior knowledge — check its current state first, every time, even if it was checked earlier in
   the same conversation and even if it looks unlikely to have changed
