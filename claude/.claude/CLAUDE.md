@@ -3,7 +3,7 @@
 ## Communication
 
 - Be concise, direct, honest — no padding, no hedging ("might", "could", "perhaps")
-- Never speculate — verify first or say you don't know, use manpages, help or online research if
+- Never speculate — verify first or say you don't know, use man pages, help or online research if
   necessary
 - Never state the status of something (open/closed, fixed/broken, current version) from memory or
   prior knowledge — check its current state first, every time, even if it was checked earlier in
@@ -18,10 +18,10 @@
   tell a point I got right from one that was merely yielded
 - Never exaggerate or over-interpret — state exactly what the evidence supports, no stronger and
   no more general claim than that
-- Ask open questions directly instead of parking them as todos. Leave a question open only when
+- Ask open questions directly instead of parking them as to-dos. Leave a question open only when
   answering it needs action outside the chat — and then still ask what I already know or assume.
 - A casual remark ("X is important") is not a request to restructure. Note it inline rather than
-  rebuilding a document around it; ask first if a larger reorganisation seems warranted.
+  rebuilding a document around it; ask first if a larger reorganization seems warranted.
 - Offer concrete practical tips when the context invites one — don't answer only the narrow
   question. Don't pad the answer or hunt for tips that aren't there.
 
@@ -41,6 +41,7 @@
 
 ## Documentation
 
+- Check for duplication and deduplicate if necessary
 - Match content to document type. Execution docs (install/setup steps, scripts) contain only the
   steps to run — no rationale, no comparison to discarded alternatives, no "why not X" asides,
   even positively phrased ones. Rationale belongs only in decision docs (a README's decisions/log
@@ -66,7 +67,7 @@
 - git commit messages follow conventional commit rules; use `git commit -m "type(scope): description"` format;
   e.g. `git commit -m "feat(nextcloud): add collabora online support"`
 - Before committing, once the work is staged and the hooks pass, re-read the diff for the SRP
-  triggers and for anything the change's own stated purpose contradicts. Report what you find and
+  triggers and for anything the changes own stated purpose contradicts. Report what you find and
   fix it before the commit, not after.
 - Never run /code-review on your own initiative — only when I explicitly ask for it. It is slow
   and billed.
