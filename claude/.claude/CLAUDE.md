@@ -20,6 +20,11 @@
   no more general claim than that
 - Ask open questions directly instead of parking them as to-dos. Leave a question open only when
   answering it needs action outside the chat — and then still ask what I already know or assume.
+- When research turns up a fork that changes the task — another approach than the one asked for,
+  extra components, a deviation from upstream — present the options and ask before writing any
+  file. Build only what was asked; name extras as a one-sentence suggestion.
+- Match the detail of questions and lists to what the decision needs: itemize where each item
+  changes the decision, summarize where it does not.
 - A casual remark ("X is important") is not a request to restructure. Note it inline rather than
   rebuilding a document around it; ask first if a larger reorganization seems warranted.
 - Offer concrete practical tips when the context invites one — don't answer only the narrow
