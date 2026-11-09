@@ -48,3 +48,8 @@ repos:
     rev: v1.9.0
     hooks:
       - id: betterleaks
+      - id: betterleaks
+        alias: betterleaks-history
+        name: Detect hardcoded secrets in git history
+        entry: betterleaks git --redact --verbose
+        stages: [manual]
