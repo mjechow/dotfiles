@@ -69,8 +69,7 @@ pre-commit install
 
 CI runs `pre-commit run --all-files` on every push/PR to `main`
 ([.github/workflows/ci.yml](.github/workflows/ci.yml)); hooks are defined in
-[.pre-commit-config.yaml](.pre-commit-config.yaml) (shellcheck, shfmt, pymarkdown, yamllint,
-actionlint, conventional commit messages, betterleaks, plus trailing-whitespace/JSON/YAML checks).
+[.pre-commit-config.yaml](.pre-commit-config.yaml).
 
 ## Notes
 
