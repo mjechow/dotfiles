@@ -12,7 +12,7 @@ repos:
       - id: check-executables-have-shebangs
 
   - repo: https://github.com/shellcheck-py/shellcheck-py
-    rev: v0.11.0.1
+    rev: v0.11.0.1-1
     hooks:
       - id: shellcheck
         args: ["--external-sources"]
@@ -24,7 +24,7 @@ repos:
         args: ["-i", "2", "-ci", "-sr", "-kp"]
 
   - repo: https://github.com/jackdewinter/pymarkdown
-    rev: v0.9.41
+    rev: v0.9.42
     hooks:
       - id: pymarkdown
 
@@ -45,7 +45,7 @@ repos:
         stages: [commit-msg]
 
   - repo: https://github.com/betterleaks/betterleaks
-    rev: v1.9.0
+    rev: v1.10.1
     hooks:
       - id: betterleaks
       - id: betterleaks
