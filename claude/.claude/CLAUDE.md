@@ -66,7 +66,7 @@
 
 ## Version Control
 
-- Never commit on your own initiative. Commits happen at the end of a session, and only when a
+- **Never commit on your own initiative.** Commits happen at the end of a session, and only when a
   human explicitly says so, so that a human has had the chance to review. Leave finished work in
   the working tree and tell me it is ready.
 - git commit messages follow conventional commit rules; use `git commit -m "type(scope): description"` format;
