@@ -6,7 +6,8 @@
 input=$(cat)
 path=$(echo "$input" | jq -r '.tool_input.file_path // .tool_input.command // ""')
 
-if echo "$path" | grep -qE 'pwd\.env$|secret\.backup|\.secret$|\.key'; then
+# Match anywhere in a command, not only at its end; `*.example` templates stay readable.
+if echo "$path" | grep -qP 'secret\.backup|(pwd\.env|\.secret|\.key)(?![\w.-])'; then
     echo "Blocked: secret file access not allowed: $path" >&2
     exit 2
 fi

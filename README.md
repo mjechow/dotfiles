@@ -13,7 +13,9 @@ Personal dotfiles managed with [GNU Stow](https://www.gnu.org/software/stow/).
 - `CLAUDE.md` — global instructions for all projects (communication style, safety rules,
   architecture guidance, version control)
 - `settings.json` — permissions allowlist, pre-tool-use hooks, UI preferences
-- `hooks/check-secrets.sh` — blocks reads/edits targeting secret files (`.key`, `.secret`, `pwd.env`, …)
+- `hooks/check-secrets.sh` — blocks Read/Edit/Bash calls whose path or command names a secret file (`.key`,
+  `.secret`, `pwd.env`, `secret.backup`) anywhere in it; `*.example` templates stay readable. Indirect access
+  (globbing scripts, `find`) is not caught
 - `commands/commit.md` — `/commit` slash command: runs pre-commit, then creates a conventional commit
 - `commands/todos.md` — `/todos` slash command: collects open tasks across all working directories
 
